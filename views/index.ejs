@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to my website showing a collection of DevOps terms and their brief description</p>
+    <table border="1">
+    <tr>
+      <td>ID#</td>
+      <td>Term</td>
+      <td>Description</td>
+      <td>Reference</td>
+    </tr>
+    <% terms.forEach(function(term) { %>
+    <tr>
+      <td><%= term.id %></td>
+      <td><%= term.name %></td>
+      <td><%= term.description %></td>
+      <td><%= term.reference %></a></td>
+    </tr>
+    <% }); %>
+  </body>
+</html>
